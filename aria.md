@@ -1,3 +1,5 @@
+* Roles should not be changed after creation.
+
 ## See also
 
   * http://www.w3.org/TR/wai-aria-primer/
