@@ -97,6 +97,8 @@ A widget "receive[s] user input and process[es] user actions."
 * aria-required
 * aria-selected (state)
 * aria-sort
+ * Apply to only one header at a time
+* "ascending", "descending", "none", or "other"
 * For range widget
  * aria-valuemax
  * aria-valuemin
@@ -130,6 +132,31 @@ A widget "receive[s] user input and process[es] user actions."
 * aria-posinset - "number or position in the current set of listitems or treeitems"; only use if not all item elements are in DOM
 * aria-setsize - "number of items in the current set of listitems or treeitems"; only use if not all item elements are in DOM
 
+## Examples
+
+### Table with sortable columns
+
+```html
+<table>
+  <thead>
+    <tr role="row">
+      <th role="columnheader" aria-sort="ascending">
+        <a href="#"></a>
+      </th>
+      <th role="columnheader">
+        Date
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr role="row">
+      <td role="gridcell"></td>
+      <td role="gridcell"></td>
+    </tr>
+  </tbody>
+</table>
+```
+
 ## Tips
 
 * Get to know: Roles, states, and properties.
@@ -144,10 +171,12 @@ A widget "receive[s] user input and process[es] user actions."
 
 ## Questions
 
- * Difference between title, label, and description?
- * Difference between describedby and labelledby?
- * Aria-specific difference between disabled and hidden?
- * Aria-specific difference between pressed, selected, checked?
+* Difference between title, label, and description?
+* Difference between describedby and labelledby?
+* Aria-specific differences between
+ * disabled and hidden?
+ * pressed, selected, checked?
+ * grid and table?
 
 ## See also
 
@@ -161,3 +190,5 @@ A widget "receive[s] user input and process[es] user actions."
 * http://alistapart.com/article/the-accessibility-of-wai-aria
 * http://alistapart.com/article/aria-and-progressive-enhancement
 * http://www.accessibleculture.org/articles/2010/11/html5-plus-aria-sanity-check/
+* http://www.marcozehe.de/2013/04/24/easy-aria-tip-6-making-clickables-accessible/
+* http://john.foliot.ca/aria-hidden/
